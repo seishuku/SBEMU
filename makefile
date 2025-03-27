@@ -86,6 +86,8 @@ OXYGEN_SRC := drivers/oxygen/xonar_dg.c \
 ALLEGRO_SRC := drivers/maestro3/maestro3.c \
 	       mpxplay/au_cards/sc_allegro.c \
 
+SIS7019_SRC := drivers/sis7019/sis7019.c
+
 SBEMU_SRC := sbemu/dbopl.cpp \
 	     sbemu/opl3emu.cpp \
 	     sbemu/pic.c \
@@ -107,7 +109,7 @@ SBEMU_SRC := sbemu/dbopl.cpp \
 	     hdpmipt.c \
 		 irqguard.c \
 
-LINUX_DRIVERS_SRC := $(CTXFI_SRC) $(EMU10K1_SRC) $(TRIDENT_SRC) $(ALS4000_SRC) $(OXYGEN_SRC) $(ALLEGRO_SRC)
+LINUX_DRIVERS_SRC := $(CTXFI_SRC) $(EMU10K1_SRC) $(TRIDENT_SRC) $(ALS4000_SRC) $(OXYGEN_SRC) $(ALLEGRO_SRC) $(SIS7019_SRC)
 SRC := $(LINUX_DRIVERS_SRC) $(CARDS_SRC) $(SBEMU_SRC)
 OBJS := $(patsubst %.cpp,output/%.o,$(patsubst %.c,output/%.o,$(SRC)))
 
